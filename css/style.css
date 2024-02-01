@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-family: "Roboto-Regular";
+}
+
+body {
+  font-family: "Roboto-Regular";
+}
+
+.mainmenu {
+  list-style-type: none;
+  display: flex;
+  background-color: lightgrey;
+}
+.mainmenu > li {
+  margin-right: 25px;
+  position: relative;
+}
+
+.mainmenu li:last-child {
+  margin-right: 0px;
+}
+
+.mainmenu li a {
+  text-decoration: none;
+  padding: 14px 12px;
+  display: inline-block;
+  color: red;
+}
+
+.submenu {
+  list-style-type: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: blue;
+  width: 110px;
+}
+
+.mainmenu > li:hover .submenu {
+  display: block;
+}
+
+.container img {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%; */
+  right: 0;
+  bottom: 0;
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+}
+
+.maincontainer {
+  height: 500px;
+  border: 5px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 52px;
+  color: white;
+}
+.heading span {
+  display: block;
+}
+
+.subhead > span {
+  color: red;
+}
